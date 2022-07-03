@@ -1,5 +1,8 @@
 import ConsoleCommands.CommandReader;
 
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
@@ -10,5 +13,7 @@ public class Main {
         if(Authentication.login(log, pass)) {
             CommandReader.startReading();
         }
+//        Instant date = Instant.now();
+//        System.out.println(date);
     }
 }

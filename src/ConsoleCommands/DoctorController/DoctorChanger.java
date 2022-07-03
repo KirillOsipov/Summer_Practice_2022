@@ -26,14 +26,11 @@ public class DoctorChanger extends AbstractCommandExecutor {
 
         if (doctorToChange.isPresent()) {
             switch (wordsArray[3]) {
-                case "set_name":
-                    doctorToChange.get().setName(new String[]{ wordsArray[4], wordsArray[5], wordsArray[6] });
-                case "set_specialization":
-                    doctorToChange.get().setSpecialization(wordsArray[4]);
-                case "set_work_experience":
-                    doctorToChange.get().setWorkExperience(Integer.parseInt(wordsArray[4]));
-                default:
-                    System.out.println("Неверная команда!");
+                case "set_name" ->
+                        doctorToChange.get().setName(new String[]{wordsArray[4], wordsArray[5], wordsArray[6]});
+                case "set_specialization" -> doctorToChange.get().setSpecialization(wordsArray[4]);
+                case "set_work_experience" -> doctorToChange.get().setWorkExperience(Integer.parseInt(wordsArray[4]));
+                default -> System.out.println("Неверная команда!");
             }
             System.out.println("Данные врача изменены");
         }

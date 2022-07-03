@@ -1,11 +1,11 @@
 package Models;
 
 public enum AppointmentStatus {
-    NEW("new"),
-    IN_PROGRESS("in_progress"),
-    CANCELLED("cancelled"),
-    WAIT_FOR_PAY("wait_for_pay"),
-    COMPLETED("completed");
+    NEW("новый"),
+    IN_PROGRESS("в_процессе"),
+    CANCELLED("отменен"),
+    WAIT_FOR_PAY("ожидает_оплаты"),
+    COMPLETED("завершен");
 
     private final String appointmentStatus;
 

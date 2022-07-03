@@ -25,14 +25,11 @@ public class PatientChanger extends AbstractCommandExecutor {
 
         if (patientToChange.isPresent()) {
             switch (wordsArray[3]) {
-                case "set_name":
-                    patientToChange.get().setName(new String[]{ wordsArray[4], wordsArray[5], wordsArray[6] });
-                case "set_animal":
-                    patientToChange.get().setAnimal(wordsArray[4]);
-                case "set_registration_date":
-                    patientToChange.get().setRegistrationDate(Instant.parse(wordsArray[4]));
-                default:
-                    System.out.println("Неверная команда!");
+                case "set_name" ->
+                        patientToChange.get().setName(new String[]{wordsArray[4], wordsArray[5], wordsArray[6]});
+                case "set_animal" -> patientToChange.get().setAnimal(wordsArray[4]);
+                case "set_registration_date" -> patientToChange.get().setRegistrationDate(Instant.parse(wordsArray[4]));
+                default -> System.out.println("Неверная команда!");
             }
             System.out.println("Данные пациента изменены");
         }

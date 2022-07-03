@@ -20,11 +20,15 @@ public class AppointmentDisplayer extends AbstractCommandExecutor {
     private int displayAppointments(String command) {
         for (Appointment appointment : appointmentRepository.findAll()) {
 
-            System.out.printf("ИД: %d. Статус приема: %s. ФИО врача: %s. ФИО пациента: %s. Дата приема: %s. \n",
+            System.out.printf("ИД: %d. Статус приема: %s. ФИО врача: %s %s %s. ФИО пациента: %s %s %s. Дата приема: %s. \n",
                     appointment.getId(),
-                    appointment.getStatus(),
-                    Arrays.toString(appointment.getDoctor().getName()),
-                    Arrays.toString(appointment.getPatient().getName()),
+                    appointment.getStatus().getAppointmentStatus(),
+                    appointment.getDoctor().getName()[0],
+                    appointment.getDoctor().getName()[1],
+                    appointment.getDoctor().getName()[2],
+                    appointment.getPatient().getName()[0],
+                    appointment.getPatient().getName()[1],
+                    appointment.getPatient().getName()[2],
                     appointment.getDateOfAppointment()
             );
         }
