@@ -1,8 +1,6 @@
 package ConsoleCommands;
 
 public enum CommandList {
-    LOGIN,
-    LOGOUT,
     ADD_PATIENT,
     CHANGE_PATIENT,
     DELETE_PATIENT,
